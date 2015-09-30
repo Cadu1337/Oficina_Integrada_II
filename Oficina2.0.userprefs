@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Coelho.cs">
+    <Files>
+      <File FileName="..\..\..\Downloads\Jogo_de_OficinaII-2015-08-28-2015-08-29\Jogo_de_OficinaII-2015-08-28-2015-08-29\Jogo_de_OficinaII-2015-08-28-2015-08-29\Jogo_de_OficinaII-2015-08-28\Jogo de OficinaII\Assets\ScriptPersonagem.cs" Line="110" Column="1" />
+      <File FileName="Assets\Coelho.cs" Line="29" Column="35" />
+      <File FileName="Assets\Script\Espada.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Personagem.cs" Line="1" Column="1" />
+      <File FileName="Assets\FantasmaScript.cs" Line="22" Column="8" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
