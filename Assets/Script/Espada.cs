@@ -4,7 +4,7 @@ using System.Collections;
 public class Espada : MonoBehaviour {
     AudioSource audio;
 	GameObject[] aranha = new GameObject[3];
-	int[]vidasaranha = new int[3];
+	public static int[]vidasaranha = new int[3];
 	GameObject personagem;
 	float positionplayer;
     GameObject[] fantasma = new GameObject[3];
@@ -97,6 +97,7 @@ public class Espada : MonoBehaviour {
 		
 		if(other.gameObject == aranha[0])
 		{
+			VidasPersonagem.monstroativo = "Aranha0";
 		
 			
 			vidasaranha[0] -= 1;
@@ -104,14 +105,14 @@ public class Espada : MonoBehaviour {
 		}
         if (other.gameObject == aranha[1])
         {
-
+			VidasPersonagem.monstroativo = "Aranha1";
 
             vidasaranha[1] -= 1;
 
         }
         if (other.gameObject == aranha[2])
         {
-
+			VidasPersonagem.monstroativo = "Aranha2";
 
             vidasaranha[2] -= 1;
 

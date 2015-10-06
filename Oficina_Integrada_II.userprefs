@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Personagem.cs">
+    <Files>
+      <File FileName="Assets\Script\Espada.cs" Line="43" Column="38" />
+      <File FileName="Assets\VidasPersonagem.cs" Line="22" Column="70" />
+      <File FileName="Assets\Script\Personagem.cs" Line="165" Column="75" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

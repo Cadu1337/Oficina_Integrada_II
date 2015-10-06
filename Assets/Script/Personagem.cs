@@ -124,17 +124,17 @@ public class Personagem : MonoBehaviour
             switch(tiros)
             {
                 case 3:
-                    balas.GetComponent<Image>().sprite = Resources.Load<Sprite>("Muniçao1-01");
+				balas.GetComponent<Image>().sprite = Resources.Load<Sprite>("SpriteBala01");
                     
                     break;
                 case 2:
-                    balas.GetComponent<Image>().sprite = Resources.Load<Sprite>("Muniçao2-01");
+				balas.GetComponent<Image>().sprite = Resources.Load<Sprite>("SpriteB'ala02");
                     break;
                 case 1:
-                    balas.gameObject.GetComponent<Image>().sprite = Resources.Load<Sprite>("Muniçao3-01-01");
+				balas.gameObject.GetComponent<Image>().sprite = Resources.Load<Sprite>("SpriteBala03");
                     break;
                 case 0:
-                    balas.gameObject.GetComponent<Image>().sprite = Resources.Load<Sprite>("");
+				balas.gameObject.GetComponent<Image>().sprite = Resources.Load<Sprite>("SpriteBala04");
                     break;
             }
 
