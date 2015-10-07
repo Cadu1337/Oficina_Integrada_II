@@ -17,7 +17,7 @@ public class Personagem : MonoBehaviour
 	bool jump;
     bool tiro;
 	int impulso;
-    int vidas = 3;
+    int vidas = 4;
     int tiros = 3;
 	GameObject espada;
 	bool ataque;
@@ -162,17 +162,17 @@ public class Personagem : MonoBehaviour
 			time2 -= Time.deltaTime;
 			if(time2 <= 0.2f)
 			{
-				spriterenderer.sprite = Resources.Load<Sprite>("Tião_Sprite_Ataque_001");
+				spriterenderer.sprite = Resources.Load<Sprite>("TiaoSprite_Ataque1");
 				
 			}
 			if(time2 <= 0.1f)
 			{ 
 				espada.SetActive(true);
-				spriterenderer.sprite = Resources.Load<Sprite>("Tião_Sprite_Ataque_002");
+				spriterenderer.sprite = Resources.Load<Sprite>("TiaoSprite_Ataque2");
 			}
 			if(time2 <= 0f)
 			{
-				spriterenderer.sprite = Resources.Load<Sprite>("Tião_Sprite_Ataque_003");
+				spriterenderer.sprite = Resources.Load<Sprite>("TiaoSprite_Ataque3");
 				time2 = 0.3f;
 				espada.SetActive(false);
 				ataque = false;
@@ -229,15 +229,18 @@ public class Personagem : MonoBehaviour
 		else { Camera.collider = true; }
 		switch(vidas)
 		{
-		case 2:
+		case 3:
                 BarraDeVida.barradevida.SetBool("2Vidas", true);
 			break;
-            case 1 :
+            case 2 :
             BarraDeVida.barradevida.SetBool("1Vidas", true);
                 break;
-            case 0:
+            case 1:
                 BarraDeVida.barradevida.SetBool("0vidas", true);
                 break;
+		case 0:
+			BarraDeVida.barradevida.SetBool("0vidas", true);
+			break;
         }
 
     }

@@ -17,11 +17,11 @@ public class Espada : MonoBehaviour {
 	void Start () {
         audio = gameObject.GetComponent<AudioSource>();
 		personagem = GameObject.Find ("Personagem");
-		vidasaranha [0] = 3;
-        vidasaranha[1] = 3;
-        vidasaranha[2] = 3;
-        vidasfantasma[0] = 3;
-        vidasfantasma[1] = 3;
+		vidasaranha [0] = 4;
+        vidasaranha[1] = 4;
+        vidasaranha[2] = 4;
+        vidasfantasma[0] = 4;
+        vidasfantasma[1] = 4;
         vidasfantasma[2] = 3;
 		aranha [0] = GameObject.Find ("aranha");
         aranha[1] = GameObject.Find("aranha1");
@@ -119,24 +119,26 @@ public class Espada : MonoBehaviour {
         }
         if (other.gameObject == fantasma[0])
         {
-
+			VidasPersonagem.monstroativo = "Fantasma1";
 
             vidasfantasma[0] -= 1;
 
         }
         if (other.gameObject == fantasma[1])
         {
-
+			VidasPersonagem.monstroativo = "Fantasma2";
 
             vidasfantasma[1] -= 1;
 
         }
         if(other.gameObject == coelho[0])
         {
+			VidasPersonagem.monstroativo = "Coelho1";
             vidascoelho[0] -= 1;
         }
         if (other.gameObject == coelho[1])
         {
+			VidasPersonagem.monstroativo = "Coelho2";
             vidascoelho[1] -= 1;
         }
 	}
