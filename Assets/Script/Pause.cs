@@ -23,8 +23,14 @@ public class Pause : MonoBehaviour {
         audio.volume = Volume;
         //Debug.Log(audio);
 
-
-
+        if(pause == false)
+        {
+            Time.timeScale = 1.0f;
+        }
+        if(pausetutorial == true)
+        {
+            Time.timeScale = 0.0f;
+        }
         if (pausetutorial == false)
         {
 

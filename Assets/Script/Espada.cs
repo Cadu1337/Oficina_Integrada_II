@@ -11,6 +11,8 @@ public class Espada : MonoBehaviour {
     public static int[] vidasfantasma = new int[3];
     GameObject[] coelho = new GameObject[2];
     public static int[] vidascoelho = new int[2];
+    public GameObject vidas;
+    bool spawn = false;
 	
 	
 	// Use this for initialization
@@ -44,17 +46,20 @@ public class Espada : MonoBehaviour {
         }
         if (personagem.transform.localScale.x >= 0.7067133)
         {
-            positionplayer = personagem.transform.position.x + 1.5f;
+            positionplayer = personagem.transform.position.x + 1.8f;
         }
         else if (personagem.transform.localScale.x <= -0.7067133)
         {
-        positionplayer = personagem.transform.position.x - 1.5f;
+        positionplayer = personagem.transform.position.x - 1.8f;
         }
 		this.transform.position = new Vector2 (positionplayer, this.transform.position.y);
 		
 		if(vidasaranha[0] == 0){
-		
+            spawn = true;
+            
+           
 			Destroy(aranha[0]);
+            
 
          
 			
@@ -87,8 +92,13 @@ public class Espada : MonoBehaviour {
         {
             Destroy(coelho[1]);
         }
-		
-		
+
+        if (spawn == true)
+        {
+            Instantiate(vidas, new Vector2(7.7f, -3.81f), Quaternion.identity);
+            spawn = false;
+
+        }
 		
 	}
 	

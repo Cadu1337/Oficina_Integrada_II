@@ -39,45 +39,15 @@ public class Creditos : MonoBehaviour {
         FadeCreditos.fader.GetComponent<Image>().color = new Color32(1, 1, 1, A);
 		
            //.GetComponent<Image>().color = new Color32 (1,1,1,A);
-        //time2 = 1f;
-        if(time <= 8f)
+        //time2 = 1
+        if(time <= 9f)
         {
-            if (A2 <= 255 && A2 >= 17)
-            {
-                A2 -= 17;
-            }
-            
-                
-                FadeCreditos.fader.GetComponent<Image>().color = new Color32(1, 1, 1, A2);
-            
-            //A = 0;
-            time3 -= Time.deltaTime;
-          
-           
-            creditos.sprite = Resources.Load<Sprite>("Creditos_02");
-            
-            
-        }
-        if(time <= 4f)
-        {
-            if (A3 <= 255 && A3 >= 17)
-            {
-                A3 -= 17;
-            }
-
-
-            FadeCreditos.fader.GetComponent<Image>().color = new Color32(1, 1, 1, A3);
-            time4 -= Time.deltaTime;
-            
-            creditos.sprite = Resources.Load<Sprite>("Creditos_03");
-        }
-        if(time <= 0f)
-        {
-            time = 12f;
-            FadeCreditos.fader.SetActive(false);
-            
             button.SetActive(true);
+            FadeCreditos.fader.SetActive(false);
         }
+
+        
+        
         Debug.Log(time);
 	
 	}

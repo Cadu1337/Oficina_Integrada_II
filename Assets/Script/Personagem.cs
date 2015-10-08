@@ -146,6 +146,10 @@ public class Personagem : MonoBehaviour
     }
     void Update() 
 	{
+        if(vidas == 0)
+        {
+            Application.LoadLevel("TelaDerrota");
+        }
 		 
 		if(Input.GetKey(KeyCode.Z) == true || Input.GetKey(KeyCode.JoystickButton2) == true )
 		{	
@@ -242,6 +246,10 @@ public class Personagem : MonoBehaviour
 			BarraDeVida.barradevida.SetBool("0vidas", true);
 			break;
         }
+        if(vidas > 4)
+        {
+            vidas = 4;
+        }
 
     }
     void OnCollisionStay2D(Collision2D other) 
@@ -282,6 +290,11 @@ public class Personagem : MonoBehaviour
 			
 			
 		}
+        if(other.gameObject.tag == "Vidas")
+        {
+            vidas += 1;
+            Destroy(other.gameObject);
+        }
 	}
         
 

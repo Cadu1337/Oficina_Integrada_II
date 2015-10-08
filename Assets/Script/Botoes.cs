@@ -12,7 +12,11 @@ public class Botoes : MonoBehaviour {
 
     public void VoltarAoJogo() 
     {
-        Pause.pause = false;
+        
+        //Pause.pause = false;
+        //Pause.pause2 = false;
+        //Pause.canvas.SetActive(false);
+        Time.timeScale = 1.0f;
     }
    
     public void VoltarAoMenu()
