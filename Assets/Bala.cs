@@ -10,6 +10,7 @@ public class Bala : MonoBehaviour {
     GameObject fanstama;
 	// Use this for initialization
 	void Start () {
+	
         fanstama = GameObject.Find("Monstros_Cozinheira");
         personagem = GameObject.Find("Personagem");
 		posicaoPersonagem = personagem.transform.localScale.x;
@@ -30,7 +31,7 @@ public class Bala : MonoBehaviour {
             transform.localScale = new Vector2(-0.1748332f, 0.1748332f);
             transform.Translate(-vel2, 0, 0);
         }
-      
+
 
         
 	
@@ -44,6 +45,7 @@ public class Bala : MonoBehaviour {
         }
         if(other.gameObject.tag == "Aranha")
         {
+			Espada.vidasaranha[0] -= 1;
             Destroy(this.gameObject);
         }
         if (other.gameObject.tag == "Poste")

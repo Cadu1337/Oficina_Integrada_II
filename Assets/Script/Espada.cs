@@ -38,7 +38,7 @@ public class Espada : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (vidasfantasma[0]);
+
 	
 		if(Input.GetKeyDown(KeyCode.Z) == true)
         {
@@ -56,8 +56,8 @@ public class Espada : MonoBehaviour {
 		
 		if(vidasaranha[0] == 0){
             spawn = true;
-            
-           
+			Instantiate(vidas, new Vector2(7.7f, -3.81f), Quaternion.identity);
+			vidasaranha[0] = -1;
 			Destroy(aranha[0]);
             
 
@@ -93,12 +93,7 @@ public class Espada : MonoBehaviour {
             Destroy(coelho[1]);
         }
 
-        if (spawn == true)
-        {
-            Instantiate(vidas, new Vector2(7.7f, -3.81f), Quaternion.identity);
-            spawn = false;
-
-        }
+       
 		
 	}
 	

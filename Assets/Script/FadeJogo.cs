@@ -52,7 +52,7 @@ public class FadeJogo : MonoBehaviour {
         }
         if (time <= 0.0f)
         {
-            fade.canvasRenderer.SetAlpha(0.1f);
+            fade.canvasRenderer.SetAlpha(0.0f);
 
             //Application.LoadLevel("Game");
         }

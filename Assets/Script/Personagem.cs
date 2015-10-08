@@ -35,7 +35,7 @@ public class Personagem : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-	
+
 		
         if (Pause.pause == false || Pause.pause2 == false)
         {
@@ -100,14 +100,14 @@ public class Personagem : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.X) == true)
             {
 
-                tiros -= 1;
+               
                 tiro = true;
                 
             }
             if(tiros > 0 && tiros <= 3 ){
             if(tiro == true)
             {
-             
+					tiros -= 1;
                 if (transform.localScale.x >= 0.7067133f)
                 {
                     Instantiate(bala, new Vector2(transform.position.x + 1f, transform.position.y), Quaternion.identity);
@@ -146,7 +146,8 @@ public class Personagem : MonoBehaviour
     }
     void Update() 
 	{
-        if(vidas == 0)
+
+		if(vidas == 0)
         {
             Application.LoadLevel("TelaDerrota");
         }
@@ -235,15 +236,26 @@ public class Personagem : MonoBehaviour
 		{
 		case 3:
                 BarraDeVida.barradevida.SetBool("2Vidas", true);
+			BarraDeVida.barradevida.SetBool("1Vidas", false);
+			BarraDeVida.barradevida.SetBool("0Vidas", false);
+			BarraDeVida.barradevida.SetBool("Morreu", false);
+
 			break;
             case 2 :
             BarraDeVida.barradevida.SetBool("1Vidas", true);
+			BarraDeVida.barradevida.SetBool("2Vidas", false);
+			BarraDeVida.barradevida.SetBool("0Vidas", false);
+			BarraDeVida.barradevida.SetBool("Morreu", false);
+
                 break;
             case 1:
                 BarraDeVida.barradevida.SetBool("0vidas", true);
+			BarraDeVida.barradevida.SetBool("2Vidas", false);
+			BarraDeVida.barradevida.SetBool("1Vidas", false);
+			BarraDeVida.barradevida.SetBool("Morreu", false);
                 break;
 		case 0:
-			BarraDeVida.barradevida.SetBool("0vidas", true);
+
 			break;
         }
         if(vidas > 4)

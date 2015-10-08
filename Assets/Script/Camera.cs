@@ -60,7 +60,7 @@ public class Camera : MonoBehaviour {
     }
     void Update() 
     {
-        Debug.Log(mito);
+    
         
 
         if (mito == true)
